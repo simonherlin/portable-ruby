@@ -1,1 +1,3 @@
 artifacts/
+build-tmux/
+__pycache__/

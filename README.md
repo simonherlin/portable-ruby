@@ -1,4 +1,8 @@
-# Portable Ruby pour Homebrew sur macOS
+# Paquets macOS — Portable Ruby et tmux
+
+## tmux autonome pour Apple Silicon
+
+[tmux 3.8 avec ses bibliothèques incluses](TMUX.md) — téléchargement direct et commandes pour Mac M4 Pro / Tahoe, sans installation Homebrew.
 
 ## Version 4.0.9
 
