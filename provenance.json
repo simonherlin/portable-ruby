@@ -1,0 +1,18 @@
+{
+  "version": "4.0.7_1",
+  "upstream_reference": "https://github.com/Homebrew/brew/pull/24211",
+  "artifacts": [
+    {
+      "filename": "portable-ruby-4.0.7_1.arm64_big_sur.bottle.tar.gz",
+      "sha256": "25d6becc4464b6e65ac38a76ccd27eee8be5d0d805f6b3292d74e37deb8dd13b",
+      "source_url": "https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:25d6becc4464b6e65ac38a76ccd27eee8be5d0d805f6b3292d74e37deb8dd13b",
+      "bytes": 12693021
+    },
+    {
+      "filename": "portable-ruby-4.0.7_1.big_sur.bottle.tar.gz",
+      "sha256": "da1d2637272470d15f1c9f9fb56a3c7889978b857912675e7e6fa57b165678de",
+      "source_url": "https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:da1d2637272470d15f1c9f9fb56a3c7889978b857912675e7e6fa57b165678de",
+      "bytes": 12245103
+    }
+  ]
+}
