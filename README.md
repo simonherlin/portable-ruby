@@ -17,7 +17,7 @@ Si Homebrew demande précisément `4.0.9` :
 HOMEBREW_BOTTLE_DOMAIN="https://raw.githubusercontent.com/simonherlin/portable-ruby/main" brew --version
 ```
 
-Le workflow macOS vérifie le démarrage de Ruby 4.0.9 et ses extensions natives sur macOS 15 ARM64 et Intel. Résultats : [Validate macOS](https://github.com/simonherlin/portable-ruby/actions/workflows/validate-macos.yml). Ce test ne constitue pas une certification Apple.
+Le workflow macOS vérifie le démarrage de Ruby 4.0.9 et ses extensions natives sur macOS 15 ARM64 et Intel. Les deux tests ont [réussi sur macOS 15 ARM64 et Intel](https://github.com/simonherlin/portable-ruby/actions/runs/40298095883). Ce test ne constitue pas une certification Apple.
 
 ## Version 4.0.7_1 conservée
 
