@@ -2,12 +2,12 @@
 
 Miroir non officiel des archives binaires officielles Homebrew, téléchargées sans modification depuis GHCR et vérifiées avec les SHA-256 publiés dans [Homebrew/brew #24211](https://github.com/Homebrew/brew/pull/24211).
 
-Les fichiers sont disponibles dans la [release 4.0.7_1](https://github.com/simonherlin/portable-ruby/releases/tag/4.0.7_1).
+Les deux fichiers `.tar.gz` sont présents directement à la racine de ce dépôt Git, ainsi que dans la [release 4.0.7_1](https://github.com/simonherlin/portable-ruby/releases/tag/4.0.7_1).
 
 | Mac | Archive |
 | --- | --- |
-| Apple Silicon (ARM64) | [portable-ruby-4.0.7_1.arm64_big_sur.bottle.tar.gz](https://github.com/simonherlin/portable-ruby/releases/download/4.0.7_1/portable-ruby-4.0.7_1.arm64_big_sur.bottle.tar.gz) |
-| Intel (x86_64) | [portable-ruby-4.0.7_1.big_sur.bottle.tar.gz](https://github.com/simonherlin/portable-ruby/releases/download/4.0.7_1/portable-ruby-4.0.7_1.big_sur.bottle.tar.gz) |
+| Apple Silicon (ARM64) | [portable-ruby-4.0.7_1.arm64_big_sur.bottle.tar.gz](https://raw.githubusercontent.com/simonherlin/portable-ruby/main/portable-ruby-4.0.7_1.arm64_big_sur.bottle.tar.gz) |
+| Intel (x86_64) | [portable-ruby-4.0.7_1.big_sur.bottle.tar.gz](https://raw.githubusercontent.com/simonherlin/portable-ruby/main/portable-ruby-4.0.7_1.big_sur.bottle.tar.gz) |
 
 Ces bouteilles ciblent macOS Big Sur ou ultérieur. Avec Homebrew exécuté sous Rosetta, utiliser l'archive Intel.
 
@@ -29,7 +29,7 @@ Ce miroir contient uniquement Portable Ruby 4.0.7_1 ; ne pas configurer ce domai
 
 ## Vérifier une archive téléchargée manuellement
 
-Télécharger `SHA256SUMS` depuis la release et lancer, dans le dossier contenant l'archive :
+Télécharger `SHA256SUMS` depuis le dépôt ou la release et lancer, dans le dossier contenant l'archive :
 
 ```sh
 shasum -a 256 portable-ruby-4.0.7_1.*.bottle.tar.gz
@@ -38,3 +38,7 @@ shasum -a 256 portable-ruby-4.0.7_1.*.bottle.tar.gz
 Comparer le résultat avec `SHA256SUMS` et `provenance.json`. L'archive contient notamment `portable-ruby/4.0.7_1/bin/ruby`.
 
 Les archives conservent les fichiers et notices de licence de leur distribution d'origine. Ce dépôt n'est pas affilié à Homebrew ni au projet Ruby. Les empreintes et la structure des archives ont été vérifiées sous Linux ; leur exécution sur macOS n'a pas été testée ici.
+
+## Validation macOS
+
+Le workflow [Validate macOS](https://github.com/simonherlin/portable-ruby/actions/workflows/validate-macos.yml) vérifie les empreintes, extrait les archives et exécute Ruby 4.0.7 ainsi que ses extensions OpenSSL, YAML, zlib et Fiddle sur macOS 15 ARM64 et Intel. Consulter son résultat pour la validation effective. Cela ne constitue pas une certification ou notarisation Apple.

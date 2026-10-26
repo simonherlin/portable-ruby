@@ -1,0 +1,37 @@
+name: Validate macOS
+on:
+  push:
+    paths:
+      - '*.tar.gz'
+      - SHA256SUMS
+      - '.github/workflows/validate-macos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            tag: arm64_big_sur
+          - runner: macos-15-intel
+            tag: big_sur
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify official checksums
+        run: shasum -a 256 -c SHA256SUMS
+      - name: Execute portable Ruby and native extensions
+        env:
+          BOTTLE_TAG: ${{ matrix.tag }}
+        run: |
+          sw_vers
+          uname -m
+          mkdir "$RUNNER_TEMP/portable-ruby-test"
+          tar -xzf "portable-ruby-4.0.7_1.${BOTTLE_TAG}.bottle.tar.gz" -C "$RUNNER_TEMP/portable-ruby-test"
+          ruby_bin="$RUNNER_TEMP/portable-ruby-test/portable-ruby/4.0.7_1/bin/ruby"
+          "$ruby_bin" --version
+          "$ruby_bin" -ropenssl -ryaml -rzlib -rfiddle -rjson -e 'abort "Wrong Ruby version" unless RUBY_VERSION == "4.0.7"; puts RUBY_DESCRIPTION; puts OpenSSL::OPENSSL_VERSION; abort unless YAML.safe_load("ok: true")["ok"]; abort unless Zlib::Inflate.inflate(Zlib::Deflate.deflate("ok")) == "ok"; puts "Native extensions OK"'
