@@ -1,0 +1,67 @@
+{
+  "tmux": {
+    "version": "3.8",
+    "revision": 0,
+    "license": "ISC",
+    "url": "https://ghcr.io/v2/homebrew/core/tmux/blobs/sha256:b436a1f261f94981c3b99429131bf719a8d56437896502815caac53a735db041",
+    "sha256": "b436a1f261f94981c3b99429131bf719a8d56437896502815caac53a735db041",
+    "dependencies": [
+      "libevent",
+      "ncurses",
+      "utf8proc",
+      "jemalloc"
+    ]
+  },
+  "jemalloc": {
+    "version": "5.4.0",
+    "revision": 0,
+    "license": "BSD-2-Clause",
+    "url": "https://ghcr.io/v2/homebrew/core/jemalloc/blobs/sha256:100f278db6678ee5e3487e6e56c679759739195010755498d2c25d5f9013b6f9",
+    "sha256": "100f278db6678ee5e3487e6e56c679759739195010755498d2c25d5f9013b6f9",
+    "dependencies": []
+  },
+  "utf8proc": {
+    "version": "2.12.0",
+    "revision": 0,
+    "license": "MIT AND Unicode-DFS-2015",
+    "url": "https://ghcr.io/v2/homebrew/core/utf8proc/blobs/sha256:19202e7aa4183f5fec9335ed196fd804e36c9ac3323040752df86aaec74f8724",
+    "sha256": "19202e7aa4183f5fec9335ed196fd804e36c9ac3323040752df86aaec74f8724",
+    "dependencies": []
+  },
+  "ncurses": {
+    "version": "6.6",
+    "revision": 0,
+    "license": "X11-distribute-modifications-variant",
+    "url": "https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:3fe0a6d4482023f880e9542af63e9229c6fcd7456b46e88b5d2d4703eb2ec943",
+    "sha256": "3fe0a6d4482023f880e9542af63e9229c6fcd7456b46e88b5d2d4703eb2ec943",
+    "dependencies": []
+  },
+  "libevent": {
+    "version": "2.1.13",
+    "revision": 1,
+    "license": "BSD-3-Clause",
+    "url": "https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:55344e687f9be992ae9dca23aad5bf6f3bbaa9e63031915cd2738da11787500b",
+    "sha256": "55344e687f9be992ae9dca23aad5bf6f3bbaa9e63031915cd2738da11787500b",
+    "dependencies": [
+      "openssl@4"
+    ]
+  },
+  "openssl@4": {
+    "version": "4.1.0",
+    "revision": 0,
+    "license": "Apache-2.0",
+    "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978",
+    "sha256": "6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978",
+    "dependencies": [
+      "ca-certificates"
+    ]
+  },
+  "ca-certificates": {
+    "version": "2026-10-20",
+    "revision": 0,
+    "license": "MPL-2.0",
+    "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:8589f4e61b3afcc5ea375aab11af1c891ec4c94421c699c2a5a4765078de4443",
+    "sha256": "8589f4e61b3afcc5ea375aab11af1c891ec4c94421c699c2a5a4765078de4443",
+    "dependencies": []
+  }
+}

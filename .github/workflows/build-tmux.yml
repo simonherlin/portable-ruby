@@ -1,0 +1,20 @@
+name: Build portable tmux
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test relocatable ARM64 package
+        run: python3 packaging/build-tmux.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tmux-macos-arm64
+          path: |
+            tmux-*-macos-arm64.tar.gz
+            tmux-*-macos-arm64.tar.gz.sha256
+          if-no-files-found: error
