@@ -32,4 +32,4 @@ Les sources et empreintes sont dans [packaging/tmux-bottles.json](packaging/tmux
 
 Test macOS 15 ARM64 : [réussi](https://github.com/simonherlin/portable-ruby/actions/runs/40321206235), avec déplacement du dossier, démarrage du serveur, exécution d'une commande dans une session et capture de son résultat.
 
-Test Tahoe ARM64 : [consulter le workflow](https://github.com/simonherlin/portable-ruby/actions/workflows/test-tmux-tahoe.yml).
+Test macOS Tahoe 26 ARM64 : [réussi](https://github.com/simonherlin/portable-ruby/actions/runs/40321455266), avec vérification des signatures ad hoc, démarrage du serveur et exécution d’une commande dans une session.
