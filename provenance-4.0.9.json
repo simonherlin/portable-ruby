@@ -1,0 +1,19 @@
+{
+  "version": "4.0.9",
+  "upstream_reference": "https://formulae.brew.sh/api/formula/portable-ruby.json",
+  "tap_git_head": "9a00277058a5f9f7f071c1aa00fc7859179cd42a",
+  "artifacts": [
+    {
+      "filename": "portable-ruby-4.0.9.arm64_big_sur.bottle.tar.gz",
+      "sha256": "43ff285a82f48c84a06d0676a3800815a19d290d32e44182ddd7a6e95478e18e",
+      "source_url": "https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:43ff285a82f48c84a06d0676a3800815a19d290d32e44182ddd7a6e95478e18e",
+      "bytes": 12703398
+    },
+    {
+      "filename": "portable-ruby-4.0.9.big_sur.bottle.tar.gz",
+      "sha256": "c90d3891dc3805de531cd262bc8f17382f499db0eb9185d76b8785ec93753fac",
+      "source_url": "https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:c90d3891dc3805de531cd262bc8f17382f499db0eb9185d76b8785ec93753fac",
+      "bytes": 12256106
+    }
+  ]
+}

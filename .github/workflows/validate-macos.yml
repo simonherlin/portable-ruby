@@ -31,7 +31,7 @@ jobs:
           sw_vers
           uname -m
           mkdir "$RUNNER_TEMP/portable-ruby-test"
-          tar -xzf "portable-ruby-4.0.7_1.${BOTTLE_TAG}.bottle.tar.gz" -C "$RUNNER_TEMP/portable-ruby-test"
-          ruby_bin="$RUNNER_TEMP/portable-ruby-test/portable-ruby/4.0.7_1/bin/ruby"
+          tar -xzf "portable-ruby-4.0.9.${BOTTLE_TAG}.bottle.tar.gz" -C "$RUNNER_TEMP/portable-ruby-test"
+          ruby_bin="$RUNNER_TEMP/portable-ruby-test/portable-ruby/4.0.9/bin/ruby"
           "$ruby_bin" --version
-          "$ruby_bin" -ropenssl -ryaml -rzlib -rfiddle -rjson -e 'abort "Wrong Ruby version" unless RUBY_VERSION == "4.0.7"; puts RUBY_DESCRIPTION; puts OpenSSL::OPENSSL_VERSION; abort unless YAML.safe_load("ok: true")["ok"]; abort unless Zlib::Inflate.inflate(Zlib::Deflate.deflate("ok")) == "ok"; puts "Native extensions OK"'
+          "$ruby_bin" -ropenssl -ryaml -rzlib -rfiddle -rjson -e 'abort "Wrong Ruby version" unless RUBY_VERSION == "4.0.9"; puts RUBY_DESCRIPTION; puts OpenSSL::OPENSSL_VERSION; abort unless YAML.safe_load("ok: true")["ok"]; abort unless Zlib::Inflate.inflate(Zlib::Deflate.deflate("ok")) == "ok"; puts "Native extensions OK"'
