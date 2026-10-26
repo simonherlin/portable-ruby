@@ -37,8 +37,8 @@ shasum -a 256 portable-ruby-4.0.7_1.*.bottle.tar.gz
 
 Comparer le résultat avec `SHA256SUMS` et `provenance.json`. L'archive contient notamment `portable-ruby/4.0.7_1/bin/ruby`.
 
-Les archives conservent les fichiers et notices de licence de leur distribution d'origine. Ce dépôt n'est pas affilié à Homebrew ni au projet Ruby. Les empreintes et la structure des archives ont été vérifiées sous Linux ; leur exécution sur macOS n'a pas été testée ici.
+Les archives conservent les fichiers et notices de licence de leur distribution d'origine. Ce dépôt n'est pas affilié à Homebrew ni au projet Ruby. Les empreintes et la structure des archives ont été vérifiées sous Linux ; leur exécution a également réussi sur les runners GitHub macOS 15 ARM64 et Intel.
 
 ## Validation macOS
 
-Le workflow [Validate macOS](https://github.com/simonherlin/portable-ruby/actions/workflows/validate-macos.yml) vérifie les empreintes, extrait les archives et exécute Ruby 4.0.7 ainsi que ses extensions OpenSSL, YAML, zlib et Fiddle sur macOS 15 ARM64 et Intel. Consulter son résultat pour la validation effective. Cela ne constitue pas une certification ou notarisation Apple.
+Le workflow [Validate macOS](https://github.com/simonherlin/portable-ruby/actions/workflows/validate-macos.yml) vérifie les empreintes, extrait les archives et exécute Ruby 4.0.7 ainsi que ses extensions OpenSSL, YAML, zlib et Fiddle sur macOS 15 ARM64 et Intel. Les deux tests ont [réussi le 26 octobre 2026](https://github.com/simonherlin/portable-ruby/actions/runs/40295746887). Cela ne constitue pas une certification ou notarisation Apple.
